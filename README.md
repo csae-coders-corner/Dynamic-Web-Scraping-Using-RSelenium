@@ -53,6 +53,7 @@ remDr$screenshot(display = TRUE)
 
 ```
 
-![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/1c1a6b10-5eb8-42b3-b42e-fa008237c22e)
+<img src="(https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/1c1a6b10-5eb8-42b3-b42e-fa008237c22e.jpg" width="200" height="200" />
+
 
 
