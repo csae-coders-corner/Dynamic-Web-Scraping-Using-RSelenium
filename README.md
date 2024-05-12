@@ -52,8 +52,28 @@ To see what R is seeing, let's take a screenshot and ask R to display the image
 remDr$screenshot(display = TRUE)
 
 ```
+![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/050f86db-320f-4bb1-8119-7ba0c9ac16b3)
 
-<img src="(https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/1c1a6b10-5eb8-42b3-b42e-fa008237c22e.jpg" width="200" height="200" />
+
+
+Now that we know that Rselenium can access the internet, we can move to interacting directly with the website using the retinue of commands that RSelenium puts at our disposal.
+
+
+
+
+## Part II – Interacting with the webpage
+
+
+Our goal is to set the search menu in the webpage to filter for all cartel cases in the database,  from 8-9-2007 to 8-9-2021. Additionaly we also want to input sector codes  and select specific document types.
+
+
+
+
+
+```
+
+
+
 
 
 
