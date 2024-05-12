@@ -6,6 +6,8 @@ In this post, I showcase a small case study of using R to interact with a webpag
 
 ## Part I – Installing Docker
 
+
+
 RSelenium works by operating a version of a internet browser that R can directly interact with. One of the easiest ways to create this virtual browser is through installing Docker[link]. Docker creates a virtual browser for Rselenium, and by extension us, to directly send commands to the browser. It also allows for our code to be reproducible and run bug-free, as we can specify exactly which browser version and type our code should run with.
 
 After installing docker, using the command prompt to begin running the browser - 
