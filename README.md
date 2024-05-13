@@ -1,4 +1,4 @@
-# Dynamic web scraping using Rselenium.
+# Dynamic web scraping using Rselenium
 
 A helpful post in an earlier coder's corner post dealt with webscraping using rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above.
 
@@ -115,7 +115,6 @@ which finds and clicks the submit button.
 
 
 
-From here, you can switch to static webscraping using rvest to download the full list of documents, with some help from Rselenium to deal with trickier elements like switching to the next page.
-
+From here, you can switch to static webscraping using rvest, to download the full list of documents. As the results are divided across many pages, Rselenium can also help by allowing you to switch pages by clicking the 'next' button.
 
 
