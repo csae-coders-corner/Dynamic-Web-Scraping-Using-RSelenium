@@ -64,16 +64,58 @@ Now that we know that Rselenium can access the internet, we can move to interact
 ## Part II – Interacting with the webpage
 
 
-Our goal is to set the search menu in the webpage to filter for all cartel cases in the database,  from 8-9-2007 to 8-9-2021. Additionaly we also want to input sector codes  and select specific document types.
+Our goal is to set the search menu in the webpage to filter for all cartel cases in the database,  from 8-9-2007 to 8-9-2021. Additionaly we also want to input sector codes  and select specific document types. Let's look at the example code below where we attempt to filter to documents related to 'Cartels' from 2008 to 2020.
 
 
+Step 1: To select 'Cartels' under policy area, we first need to select cartels under 'policy area'. How do we tell R which button to press? For that, we need to use the underyling HTML structure of the webpage. This is what you see when you click 'see page source' on most webpages.
+![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/ce8a5aa5-a313-42d0-8c1f-3b82eda967fc)
 
+
+While it's quite the hassle to identify the button from pure HTML, a much easier way to point R to the button is to use a browser extension that does the work for you. I use Selector gadget [https://selectorgadget.com] that identifies the selector when you point and click.
+
+
+![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/7ea12515-b0dc-411b-a277-c3d9aa5c8815)
+
+
+We've found that the selector is ".classRadioButton" and we can also trial-and-error to find that 'Cartels' is the fourth button in that class. The code below then selects the button
+
+
+```
+rsel <- remDr$findElements(using = "css", ".classRadioButton") 
+rsel[[4]]$clickElement()  # click cartels
 
 
 ```
 
 
+To filter documnets from 2008 to 2020, we will interact with the 'Decision date' inputs. Following the same process above,
 
+```
+morereviews <- remDr$findElement(using = "css", "#decision_date_from")
+morereviews$sendKeysToElement(list("8/9/2008"))
+morereviews <- remDr$findElement(using = "css", "#decision_date_to")
+morereviews$sendKeysToElement(list("8/9/2020"))
+```
+
+
+clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf or stack exchange for trickier web elements.
+
+Now we can use 
+```
+remDr$screenshot(display = TRUE)
+
+```
+to check if all our desired options are selected, followed by
+```
+morereviews <- remDr$findElement(using = "css", ".submit:nth-child(6)")
+morereviews$clickElement()
+```
+
+which finds and clicks the submit button.
+
+
+
+From here, you can switch to static webscraping using rvest to download the full list of documents, with some help from Rselenium to deal with trickier elements like switching to the next page.
 
 
 
