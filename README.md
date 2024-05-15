@@ -101,16 +101,16 @@ morereviews$sendKeysToElement(list("8/9/2020"))
 
 clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf or stack exchange for trickier web elements.
 
-Now we can use 
+Again, we can use a screenshot to check if all our desired options are selected.
 ```
 Sys.sleep(5) # gives the webpage time to load
 remDr$screenshot(display = TRUE)
 
 ```
-to check if all our desired options are selected.
 
 
 ![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/b5d21d4b-de69-47f6-a9a2-2b9088d2e7af)
+
 
 
 Let's follow this by pressing the submit button to send our search query.
