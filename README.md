@@ -107,7 +107,15 @@ Sys.sleep(5) # gives the webpage time to load
 remDr$screenshot(display = TRUE)
 
 ```
-to check if all our desired options are selected, followed by
+to check if all our desired options are selected.
+
+
+![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/b5d21d4b-de69-47f6-a9a2-2b9088d2e7af)
+
+
+Let's follow this by pressing the submit button to send our search query.
+
+
 
 ```
 morereviews <- remDr$findElement(using = "css", ".submit:nth-child(6)")
