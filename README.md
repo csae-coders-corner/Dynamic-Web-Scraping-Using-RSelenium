@@ -50,7 +50,7 @@ To see what R is seeing, let's take a screenshot and ask R to display the image.
 
 ```
 
-remDr$Screenshot()
+remDr$screenshot(display = TRUE)
 
 ```
 
@@ -103,10 +103,12 @@ clickElement and sendKeysToElement are only a few of the many options available 
 
 Now we can use 
 ```
+Sys.sleep(5) # gives the webpage time to load
 remDr$screenshot(display = TRUE)
 
 ```
 to check if all our desired options are selected, followed by
+
 ```
 morereviews <- remDr$findElement(using = "css", ".submit:nth-child(6)")
 morereviews$clickElement()
@@ -116,6 +118,6 @@ which finds and clicks the submit button.
 
 
 
-From here, you can switch to static webscraping using rvest, to download the full list of documents. As the results are divided across many pages, Rselenium can also help by allowing you to switch pages by clicking the 'next' button.
+From here, you can switch to static webscraping using rvest, to download the full list of documents. RSelenium can be used in tandem with rvest, for eg., to click next page after scraping data from each page with rvest.
 
 
