@@ -49,12 +49,12 @@ remDr$navigate("https://ec.europa.eu/competition/elojade/isef/index.cfm?clear=1&
 To see what R is seeing, let's take a screenshot and ask R to display the image. You should see a website with a search box as below:
 
 ```
-![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/5c115dc6-ccc1-48f1-97bb-3e46bb793457)
 
+remDr$Screenshot()
 
 ```
-![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/050f86db-320f-4bb1-8119-7ba0c9ac16b3)
 
+![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/5c115dc6-ccc1-48f1-97bb-3e46bb793457)
 
 
 Now that we know that Rselenium can access the internet, we can move to interacting directly with the website using the retinue of commands that RSelenium puts at our disposal.
