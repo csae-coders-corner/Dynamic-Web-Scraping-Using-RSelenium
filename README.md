@@ -1,36 +1,39 @@
 # Dynamic web scraping using Rselenium
 
-A helpful post in an [earlier coder's corner post](https://github.com/csae-coders-corner/Webscraping) dealt with webscraping using rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above.
+An [earlier coder's corner post](https://github.com/csae-coders-corner/Webscraping) dealt with webscraping using rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above. Specifically, R Selenium offers advantages in dealing with interactive, dynamic webpages.
 
-In this post, I showcase a small case study of using R to interact with a webpage, specifically the European Competition Authority's library of rulings. This task would be the challenge before scraping the website to download all relevant rulings of interest.
+
+In this post, I showcase a small case study of using R to interact with a webpage, speficially to input fields within a search box. For this example, let's use the European Competition Authority's library of rulings.
 
 ## Part I – Installing Docker
 
 
 
-RSelenium works by operating a version of an internet browser that R can directly interact with. One of the easiest ways to create this virtual browser is through installing Docker[link]. Docker creates a virtual browser for Rselenium, and by extension us, to directly send commands to the browser. It also allows for our code to be reproducible and run bug-free, as we can specify exactly which browser version and type our code should run with.
+RSelenium works by operating a version of an internet browser that R can directly interact with. One of the easiest ways to create this virtual browser is through installing [Docker](https://www.docker.com). Docker creates a virtual browser for Rselenium, and by extension us, to directly send commands to the browser. It also allows for our code to be reproducible and run bug-free, as we can specify exactly which browser version our code should run on.
 
 After installing docker, using the command prompt to begin running the browser - 
 
 ```
 docker run -d -p 4445:4444 selenium/standalone-firefox:2.53.0
 ```
-For further help, refer directly to https://docs.ropensci.org/RSelenium/articles/docker.html.
+For further help, refer directly to [https://docs.ropensci.org/RSelenium/articles/docker.html](https://docs.ropensci.org/RSelenium/articles/docker.html).
 
 ## Part II – Setting up Rselenium
 
-Having made a version of the browser within Docker, and after installing RSelenium, we connect RSelenium with the existing browser.
+Having made a version of the browser within Docker, we connect RSelenium with the existing browser.
 
 
 ```
+library(RSelenium)
   
-  # initialzing virtual environment
+# initialzing virtual environment
 
 fprof <- makeFirefoxProfile(list(
   "pdfjs.disabled"=TRUE,
   "plugin.scan.plid.all"=FALSE,
   "plugin.scan.Acrobat" = "99.0",
   "browser.helperApps.neverAsk.saveToDisk"='application/pdf'))
+
 # Open a firefox browser
 remDr <- remoteDriver(remoteServerAddr = "localhost", port = 4445L, extraCapabilities = fprof )
 remDr$open()
@@ -57,7 +60,7 @@ remDr$screenshot(display = TRUE)
 ![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/5c115dc6-ccc1-48f1-97bb-3e46bb793457)
 
 
-Now that we know that Rselenium can access the internet, we can move to interacting directly with the website using the retinue of commands that RSelenium puts at our disposal.
+Now that we know that Rselenium can access the internet, we can move to interacting directly with the website using the full toolkit of commands that RSelenium puts at our disposal.
 
 
 
@@ -99,7 +102,7 @@ morereviews$sendKeysToElement(list("8/9/2020"))
 ```
 
 
-clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf or stack exchange for trickier web elements.
+clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit [link](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) or stack exchange for trickier web elements.
 
 Again, we can use a screenshot to check if all our desired options are selected.
 ```
@@ -126,6 +129,6 @@ which finds and clicks the submit button.
 
 
 
-From here, you can switch to static webscraping using rvest, to download the full list of documents. RSelenium can be used in tandem with rvest, for eg., to click next page after scraping data from each page with rvest.
+From here, you can switch to static webscraping using rvest to download the full list of documents. RSelenium can be used in tandem with rvest, for eg., to click next page after scraping data from each page with rvest.
 
 
