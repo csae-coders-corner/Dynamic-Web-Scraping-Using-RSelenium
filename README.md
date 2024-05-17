@@ -92,7 +92,7 @@ rsel[[4]]$clickElement()  # click cartels
 ```
 
 
-To filter documnets from 2008 to 2020, we will interact with the 'Decision date' inputs. Following the same process above,
+To filter documents from 2008 to 2020, we will interact with the 'Decision date' inputs. Following the same process above,
 
 ```
 rsel <- remDr$findElement(using = "css", "#decision_date_from")
@@ -102,7 +102,7 @@ rsel$sendKeysToElement(list("8/9/2020"))
 ```
 
 
-clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit [link](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) or stack exchange for trickier web elements.
+> **_NOTE:_**  clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit [link](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) or stack exchange for trickier web elements.
 
 Again, we can use a screenshot to check if all our desired options are selected.
 ```
@@ -125,10 +125,8 @@ rsel <- remDr$findElement(using = "css", ".submit:nth-child(6)")
 rsel$clickElement()
 ```
 
-
-
-
-
 From here, you can switch to static webscraping using rvest to download the full list of documents. RSelenium can be used in tandem with rvest, for eg., to click next page after scraping data from each page with rvest.
 
 
+
+**Abraham Raju, Research Assistant, Blavatnik School of Government, Oxford 18 May 2024**
