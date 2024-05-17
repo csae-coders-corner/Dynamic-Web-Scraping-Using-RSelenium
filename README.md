@@ -125,7 +125,7 @@ rsel <- remDr$findElement(using = "css", ".submit:nth-child(6)")
 rsel$clickElement()
 ```
 
-which finds and clicks the submit button.
+
 
 
 
