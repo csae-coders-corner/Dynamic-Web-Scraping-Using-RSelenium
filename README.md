@@ -95,10 +95,10 @@ rsel[[4]]$clickElement()  # click cartels
 To filter documnets from 2008 to 2020, we will interact with the 'Decision date' inputs. Following the same process above,
 
 ```
-morereviews <- remDr$findElement(using = "css", "#decision_date_from")
-morereviews$sendKeysToElement(list("8/9/2008"))
-morereviews <- remDr$findElement(using = "css", "#decision_date_to")
-morereviews$sendKeysToElement(list("8/9/2020"))
+rsel <- remDr$findElement(using = "css", "#decision_date_from")
+rsel$sendKeysToElement(list("8/9/2008"))
+rsel<- remDr$findElement(using = "css", "#decision_date_to")
+rsel$sendKeysToElement(list("8/9/2020"))
 ```
 
 
@@ -121,8 +121,8 @@ Let's follow this by pressing the submit button to send our search query.
 
 
 ```
-morereviews <- remDr$findElement(using = "css", ".submit:nth-child(6)")
-morereviews$clickElement()
+rsel <- remDr$findElement(using = "css", ".submit:nth-child(6)")
+rsel$clickElement()
 ```
 
 which finds and clicks the submit button.
