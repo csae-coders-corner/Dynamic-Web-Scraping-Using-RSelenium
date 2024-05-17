@@ -81,7 +81,7 @@ While it's quite the hassle to identify the button from pure HTML, a much easier
 ![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/7ea12515-b0dc-411b-a277-c3d9aa5c8815)
 
 
-We've found that the selector is ".classRadioButton" and we can also trial-and-error to find that 'Cartels' is the fourth button in that class. The code below then selects the button
+We've found that the selector is ".classRadioButton" and we can also use trial-and-error to find that 'Cartels' is the fourth button in that class. The code below then `clicks' the button.
 
 
 ```
