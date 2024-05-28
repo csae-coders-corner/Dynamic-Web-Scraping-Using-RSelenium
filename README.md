@@ -107,7 +107,7 @@ rsel$sendKeysToElement(list("8/9/2020"))
 ```
 
 
-> **_NOTE:_**  clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit [link](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) or stack exchange for trickier web elements.
+> **_NOTE:_**  clickElement and sendKeysToElement are only a few of the many options available in Rselenium to you, for the full catalogue visit [the documentation](https://cran.r-project.org/web/packages/RSelenium/RSelenium.pdf) or refer to stack exchange (especially for for trickier web elements).
 
 Again, we can use a screenshot to check if all our desired options are selected.
 ```
