@@ -44,7 +44,7 @@ remDr$open()
 
 
 ```
-makefirefoxProfile lets us set some default behaviour of our virtual firefox browser. Also note that the `ports' and `browser' correspond to the browser we created with Docker. 
+makefirefoxProfile lets us set some default behaviour of our virtual firefox browser. Also note that the 'ports' and 'browser' correspond to the browser we created with Docker. 
 
 To check if this worked, open a webpage in Rselenium using 
 
