@@ -1,3 +1,7 @@
+
+![CC Graphics 2024_Dynamic Web Scraping-17](https://github.com/csae-coders-corner/dyn-web-scrape/assets/148211163/ff6e5fd1-66ee-4873-9303-f6df87c36167)
+
+
 # Dynamic web scraping using Rselenium
 
 An [earlier coder's corner post](https://github.com/csae-coders-corner/Webscraping) dealt with webscraping using rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above. Specifically, R Selenium offers advantages in dealing with interactive, dynamic webpages.
