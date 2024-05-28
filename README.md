@@ -79,7 +79,7 @@ Step 1: To select 'Cartels' under policy area, we first need to select cartels u
 ![image](https://github.com/csae-coders-corner/dyn-web-scrape/assets/64132992/ce8a5aa5-a313-42d0-8c1f-3b82eda967fc)
 
 
-While it's quite the hassle to identify the button from pure HTML, a much easier way to point R to the button is to use a browser extension that does the work for you. I use Selector gadget [https://selectorgadget.com] that identifies the selector when you point and click.
+While it's quite the hassle to identify the button from pure HTML, a much easier way to point R to the button is to use a browser extension that does the work for you. I use Selector gadget https://selectorgadget.com that identifies the selector when you point and click.
 
 
 
