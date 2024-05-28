@@ -4,10 +4,10 @@
 
 # Dynamic web scraping using Rselenium
 
-An [earlier coder's corner post](https://github.com/csae-coders-corner/Webscraping) dealt with webscraping using rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above. Specifically, R Selenium offers advantages in dealing with interactive, dynamic webpages.
+An [earlier coder's corner post](https://github.com/csae-coders-corner/Webscraping) dealt with webscraping using Rvest. Rvest allows you to scrape text and download files in static webpages, but RSelenium completes the webscraping toolkit, allowing you to actively interact with the webpages themselves. Let's say we need to input log-in details, select drop-down menus and even click next-page buttons - the RSelenium package is powerful enough for all of the above. Specifically, R Selenium offers advantages in dealing with interactive, dynamic webpages.
 
 
-In this post, I showcase a small case study of using R to interact with a webpage, speficially to input fields within a search box. For this example, let's use the European Competition Authority's library of rulings.
+In this post, I showcase a small case study of using R to interact with a webpage, specifically to input fields within a search box. For this example, let's use the European Competition Authority's library of rulings.
 
 ## Part I – Installing Docker
 
