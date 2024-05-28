@@ -69,7 +69,7 @@ Now that we know that Rselenium can access the internet, we can move to interact
 
 
 
-## Part II – Interacting with the webpage
+## Part III  – Interacting with the webpage
 
 
 Our goal is to set the search menu in the webpage to filter for all cartel cases in the database, from 8-9-2007 to 8-9-2021. Let's look at the example code below where we attempt to filter to documents related to 'Cartels' from 2008 to 2020.
